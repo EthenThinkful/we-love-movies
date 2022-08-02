@@ -1,1 +1,8 @@
-GET http://localhost:5000/movies/1/theaters
+PUT   http://localhost:5000/reviews/1
+
+
+
+
+
+
+

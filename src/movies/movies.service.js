@@ -27,9 +27,18 @@ return knex("theaters as t")
 .groupBy("t.theater_id")
 }
 
+function listReviewsAndCritics(movieId) {
+    return knex("reviews as r")
+    .join("critics as c", "c.critic_id", "r.critic_id")
+    .join("movies as m", "r.movie_id", "m.movie_id")
+    .select("c.*", "r.*")
+    .where({"m.movie_id": movieId})
+}
+
 module.exports = {
     list,
     listMoviesInTheaters,
     read,
     listTheatersHostingMovie,
+    listReviewsAndCritics,
 }
