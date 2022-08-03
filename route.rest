@@ -1,4 +1,4 @@
-PUT   http://localhost:5000/reviews/1
+GET    http://localhost:5000/theaters
 
 
 

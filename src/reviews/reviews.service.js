@@ -22,7 +22,14 @@ function destroy(reviewId) {
     return knex('reviews as r')
         .select('*')
         .where({ review_id: updatedReview.review_id })
-        .update(updatedReview, "*")
+        .update(updatedReview)
+        .then(() => 
+          knex("reviews")
+            .select('*')
+            .where({ review_id: updatedReview.review_id })
+            .first()
+        )
+        
 }
 
 function updateCritic(reviewId) {
