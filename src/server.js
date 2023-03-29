@@ -1,4 +1,4 @@
-const { PORT = 5000 } = process.env;
+const { PORT = 8080 } = "postgres://yiqomcrm:b5uJrZh72kiDfLzhUCVOA1faTZkPIuwP@otto.db.elephantsql.com/yiqomcrm";
 
 const app = require("./app");
 const knex = require("./db/connection");
