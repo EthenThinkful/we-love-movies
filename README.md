@@ -1,4 +1,4 @@
-# WeLoveMovies
+# we-love-movies
 
 Live Demo: https://we-love-movies-frontend-red.vercel.app/
 
